@@ -59,31 +59,16 @@ resource "azurerm_storage_account" "general-storage" {
 
 
     share_properties {
-
- 
-
         retention_policy {
-
             days = 7
-
         }
-
     }
-
- 
 
     timeouts {}
 
- 
-
     lifecycle {
-
         ignore_changes = [
-
             tags,
-
       ]
-
     }   
-
 }

@@ -1,49 +1,28 @@
 variable general {
-
     type = object({
-
         tenant_id       = string
-
         subscription_id = string
-
         resource_group  = string
-
         location        = string
-
         project         = string
-
         environment     = string
-
     })
-
 }
 
- 
 
 variable tags {
-
     type = object({
-
         group   = string
-
         project = string
-
         sap-fc  = string
-
         rc      = string
-
     })
 
     default = {
-
         "group"   = "CDOS"
-
         "project" = "Enterprise Data Hub"
-
         "sap-fc"  = "270014-ISS0701-B120-65008720-27-96145-01-00-00-00-A01"
-
         "rc"      = "77J00-527-232-4808-96145-6"
-
   }
 
 }
@@ -51,75 +30,46 @@ variable tags {
  
 
 variable "private_dns_zone" {
-
     type = object({
-
         subscription_id = string
-
         resource_group  = string
-
         blob_name       = string
-
         file_name       = string
-
         queue_name      = string
-
         table_name      = string
-
     })
 
     default = {
-
         subscription_id = "0d47baca-2ef1-481d-a229-0884393e67cf"
-
         resource_group  = "Network-PrivateLinkDns-RG"
-
         blob_name       = "privatelink.blob.core.windows.net"
-
         file_name       = "privatelink.file.core.windows.net"
-
         queue_name      = "privatelink.queue.core.windows.net"
-
         table_name      = "privatelink.table.core.windows.net"
-
     }
-
 }
 
  
 
 variable "endpoint" {
-
     type = object({
-
         network     = string
-
         subnet      = string
-
         network_rg  = string
-
-    })
-
+    }
+    )
 }
 
  
 
 variable edh_storage {
-
     type = object({
-
         tfstate_container   = string
-
         access_tier         = string
-
         account_kind        = string
-
         account_tier        = string
-
         account_replication_type = string
-
         min_tls_version          = string
-
     })
 
 }
